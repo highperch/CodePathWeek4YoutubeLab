@@ -25,7 +25,6 @@ class HamburgerViewController: UIViewController {
         super.viewDidLoad()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         feedViewOriginalCenter = feedView.center
-        print(feedViewOriginalCenter)
         
         //Set up Menu View Controller
         menuViewController = storyboard.instantiateViewControllerWithIdentifier("MenuViewController")
@@ -57,7 +56,7 @@ class HamburgerViewController: UIViewController {
         var menuScale = convertValue(location_x, r1Min: 0, r1Max: 290, r2Min: 0.9, r2Max: 1.0)
         
         if sender.state == UIGestureRecognizerState.Began {
-            menuView.transform = initialMenuTransform
+            
         } else if sender.state == UIGestureRecognizerState.Changed {
             print("translation:" + String(translation_x))
             print("location:" + String(location_x))
